@@ -34,3 +34,24 @@ removeBtn.onclick = () => {
   if (!list.lastElementChild) return;
   list.removeChild(list.lastElementChild);
 };
+
+// ==========================
+// Change first item innerHTML (bold)
+// ==========================
+changeHTMLBtn.onclick = () => {
+  const text = input.value.trim(); // Input থেকে text নিলাম
+  if (!list.firstElementChild || !text) return; // List খালি বা input খালি হলে কিছু হবে না
+  list.firstElementChild.innerHTML = `<strong>${text}</strong>`; // Bold HTML apply
+  input.value = ""; // Input খালি
+};
+
+// ==========================
+// Change first item style
+// ==========================
+changeStyleBtn.onclick = () => {
+  if (!list.lastElementChild) return; // List খালি হলে কিছু হবে না
+  const first = list.lastElementChild;
+  first.style.color = "white"; // Text color white
+  first.style.backgroundColor = "purple"; // Background purple
+  first.style.fontWeight = "bold"; // Font bold
+};
