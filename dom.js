@@ -26,3 +26,11 @@ addBtn.onclick = () => {
   list.appendChild(li);
   input.value = "";
 };
+
+// ==========================
+// Remove last item
+// ==========================
+removeBtn.onclick = () => {
+  if (!list.lastElementChild) return;
+  list.removeChild(list.lastElementChild);
+};
